@@ -48,6 +48,13 @@ palabraNueva = ''
 significadoNuevo = ''
 clave = ''
 significado = ''
+palabra = ''
+pab1 = ''
+sig1 = ''
+pab2 = ''
+sig2 = ''
+pabsFavs = ''
+dicOrdenado = ''
 
 while  repetir:
     print("Bienvenido a tu diccionario.")
@@ -58,6 +65,7 @@ while  repetir:
     print("5. Pedir al usuario sus dos palabras favoritas con los significados y combinar este con el ya creado modificando el original..")
     print("6. Borrar una palabra (ustedes decidís la mejor forma).")
     print("7. Ordenar el diccionario por orden alfabético.")
+    print("8. Salir.")
     opcion = int(input("Escoge tu opción: "))
     match opcion:
         case 1:
@@ -70,14 +78,32 @@ while  repetir:
             for clave, significado in Esp_Ing.items():
                 print(f'{clave}: {significado}')
         case 3:
-            print()
+            palabra = input("¿Qué palabra deseas buscar? ")
+            if palabra in Esp_Ing.items():
+                print(f"Signidicado: {Esp_Ing[palabra]}")
         case 4:
-            print()
+            palabra = input("¿Qué palabra deseas modificar? ")
+            if palabra in Esp_Ing.items():
+                significado = input("¿Qué significado nuevo le quieres poner? ")
+                Esp_Ing[palabra] = significado
+                print(f"Palabra modificada: {Esp_Ing[palabra]}")
         case 5:
-            print()
+            pab1 = input("Dime tu palabra favorita del diccionario: ")
+            sig1 = input("Y su significado: ")
+            pab2 = input("Ahora otra palabra: ")
+            sig2 = input("Su significado: ")
+            pabsFavs = {pab1:sig1, pab2:sig2}
+            print(Esp_Ing)
         case 6:
-            print()
+            palabra = input("Dime una palabra para eliminar: ")
+            if palabra in Esp_Ing:
+                Esp_Ing.pop(palabra)
+            print(Esp_Ing)
         case 7:
-            print()
+            print('Diccionario ordenado alfabéticamente.')
+            dicOrdenado = dict(sorted(Esp_Ing.items()))
+            print(dicOrdenado)
+        case 8:
+            print('Hasta pronto.')
         case _:
             print('Unknown option.')
