@@ -1,1 +1,0 @@
-f = open('file/temps.txt', 'r') # Función para abrir ficheros
