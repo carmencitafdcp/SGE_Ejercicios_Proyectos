@@ -1,6 +1,6 @@
 cont = 0
 
-f = open('Tema2Ficheros/Ejercicio1/entrada.txt', 'r')
+f = open('Tema2Ficheros/Ejercicio1/entrada.txt')
 lineas = f.readlines()
 f.close()
 
