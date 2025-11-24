@@ -1,5 +1,7 @@
 repetir = True
 option = 0
+lineas = ""
+maxLength = 0
 
 f = open("Tema2Ficheros/Ejercicio6/texto.txt")
 
@@ -14,6 +16,11 @@ while repetir:
     option = input("Selecciona una opción: ")
     match option:
         case 1:
+            lineas = f.readlines()
+            for linea in lineas:
+                maxLength = len(linea)
+                if len(linea) > maxLength:
+                    print(f"La palabra más larga es {linea}")
             print()
         case 2:
             print()
