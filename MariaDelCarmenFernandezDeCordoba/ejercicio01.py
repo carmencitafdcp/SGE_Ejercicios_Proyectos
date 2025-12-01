@@ -6,7 +6,6 @@ lista_nums = []
 lista_mayores = []
 i = 0
 maximo = 0
-cantidad = 0
 
 while i < cantidad:
     numeros = int(input("Escribe un número: "))
