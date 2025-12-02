@@ -1,14 +1,17 @@
 cantidad = int(input("¿Cuántos números quieres introducir? ")) 
 nums = []
-i = 0
+    
+def mensaje(nums, cantidad):
+    for n in range(cantidad):
+        numero = int(input("Di un número: "))
+        nums.append(numero)
+        if n > 0 and numero <= nums[n-1]:
+            print(f"El número {numero} es menor que el anterior.")
 
-while i < cantidad:
-    numeros = int(input("Escribe un número: "))
-    nums.append(numeros)
-    i += 1
 
-def mensaje(numeros, nums):
-    lista = []
+mensaje(cantidad)
+
+
     
 
 

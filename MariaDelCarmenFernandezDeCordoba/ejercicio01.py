@@ -1,5 +1,3 @@
-#
-
 num = int(input("Introduce cualquier número: "))
 cantidad = int(input("¿Cuántos números quieres introducir? "))
 lista_nums = []
