@@ -26,3 +26,10 @@ else:
     print(f"Perfecto! Aquí está el número {r}")
 finally:
     print("Hola buenas, just cheking...")
+
+def _sum(a: int, b: int) -> int:
+    if isinstance(a, int) and isinstance(b, int):
+        return a + b
+    raise TypeError('Operands must be integers')
+
+_sum(0,'h')
